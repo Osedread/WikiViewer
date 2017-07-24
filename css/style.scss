@@ -1,40 +1,4 @@
-$color1: rgb(220, 220, 220);
-
-body {
-    background: $color1;
-    
-    section {
-        height: 90vh;
-        display: flex;
-        flex-flow: column nowrap;
-        // Horizontal align
-        justify-content: center;
-        // Vertical align
-        align-items: center;
-        text-align: center;
-        margin: auto;
-    }
-}
-
-span {
-    font-size: 1.4em;
-    overflow-y: hidden;
-}    
-
-span.zoomIn {
-    transition: 1s;
-    font-size: 10em;
-    opacity: 0;
-}
-
-input {
-    text-align: center;
-    border-radius: 8px;
-    opacity: 0;
-}
-
-input.fadeIn {
-    transition: 4s;
-    opacity: 1;
-}
-
+@import "partials/base";
+@import "partials/intro";
+@import "partials/xhr";
+@import "partials/main";

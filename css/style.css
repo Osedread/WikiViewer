@@ -1,3 +1,84 @@
+@keyframes fadeSearchIconOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    font-size: 10em;
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes searchDivIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.animateFadeOut {
+  animation: fadeSearchIconOut 1.2s ease-out forwards;
+}
+
+.fadeIn {
+  animation: searchDivIn 0.5s ease-in forwards;
+}
+
+button#openerBtn {
+  font-size: 1.4em;
+  overflow-y: hidden;
+  border: none;
+  padding: none;
+  outline: none;
+}
+
+.searchDiv {
+  opacity: 0;
+}
+
+input {
+  text-align: center;
+  border-radius: 12px;
+  font-size: 1.2em;
+  padding: 0.3em;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+/* IE 10+ */
 body {
   background: gainsboro;
 }
@@ -10,28 +91,6 @@ body section {
   align-items: center;
   text-align: center;
   margin: auto;
-}
-
-span {
-  font-size: 1.4em;
-  overflow-y: hidden;
-}
-
-span.zoomIn {
-  transition: 1s;
-  font-size: 10em;
-  opacity: 0;
-}
-
-input {
-  text-align: center;
-  border-radius: 8px;
-  opacity: 0;
-}
-
-input.fadeIn {
-  transition: 4s;
-  opacity: 1;
 }
  
 

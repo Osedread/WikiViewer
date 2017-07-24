@@ -1,0 +1,15 @@
+body {
+    background: $color1;
+    
+    section {
+        height: 90vh;
+        display: flex;
+        flex-flow: column nowrap;
+        // Horizontal align
+        justify-content: center;
+        // Vertical align
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+}
