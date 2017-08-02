@@ -46,7 +46,7 @@ button#openerBtn {
 }
 
 .searchDiv {
-  opacity: 0;
+  display: none;
 }
 
 input {
@@ -91,6 +91,25 @@ body section {
   align-items: center;
   text-align: center;
   margin: auto;
+}
+
+.resultsContainer {
+  height: 65vh;
+  margin: 0 8em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-row-gap: 1em;
+  padding: 1em;
+}
+
+.resultsContainer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.resultsCard {
+  border: 2px solid black;
+  padding: 1em;
 }
  
 

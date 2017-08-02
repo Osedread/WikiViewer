@@ -52,7 +52,9 @@ button#openerBtn {
 
 // Content after OpenerIcon fades out
 //
-.searchDiv { opacity: 0; }
+.searchDiv {
+    display: none;
+}
 
 input {
     text-align: center;

@@ -7,6 +7,7 @@ const op = () => {
     let delayPopIn = setTimeout(function() {
         if (openerBtn.classList.contains("animateFadeOut")) {
             container.removeChild(openerBtn);
+            searchDiv.style.display = "block";
             searchDiv.classList.add("fadeIn");
         }
     }, 1000);
