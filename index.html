@@ -21,8 +21,12 @@
 
 <section id="container" class="container">
   <div id="searchDiv" class="searchDiv">
-    <input type="search" results=3 placeholder="Search in Wikipedia" name="searchBar">
-    <button>Search</button>
+    <input id="searchBox" type="search" results=3 placeholder="Search in Wikipedia" name="searchBar">
+    <button id="searchBtn">Search</button>
+    <button id="randomBtn">Random Search</button>
+    <div class="resultsContainer">
+
+    </div>
   </div>
   
   <button id="openerBtn">
@@ -33,5 +37,8 @@
 
 
   <script src="js/custom.js"></script>
+  <script src="js/xhr.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
 </body>
 </html>
