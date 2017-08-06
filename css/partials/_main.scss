@@ -1,15 +1,113 @@
-body {
-    background: $color1;
+// Mixins
+@mixin border-style {
+    border-radius: 0;
+    border: 5px solid $color2;
+    box-shadow: 5px 8px 8px black;
     
-    section {
-        height: 90vh;
-        display: flex;
-        flex-flow: column nowrap;
-        // Horizontal align
-        justify-content: center;
-        // Vertical align
-        align-items: center;
-        text-align: center;
-        margin: auto;
+}
+
+// Keyframes and animation classes
+//
+@keyframes fadeSearchIconOut {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    99% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        font-size: 10em;
+        display: none;
+        opacity: 0;
     }
 }
+
+@keyframes searchDivIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.animateFadeOut { animation: fadeSearchIconOut 1.2s ease-out forwards; }
+.fadeIn { animation: searchDivIn 0.5s ease-in forwards; }
+
+// General Style
+button#openerBtn {
+    font-size: 1.4em;
+    overflow-y: hidden;
+    border: none;
+    padding: none;
+    outline: none;
+    background-color: inherit;
+    color: $color2;
+}
+
+body {
+    background: $color1;
+    font-family: $font1;
+    font-size: 1.3em;
+    color: $color2;
+    
+        section {
+            height: 90vh;
+            margin: auto;
+            // Flexbox to center div
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            
+                .searchDiv {
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    
+                        input {
+                            text-align: center;
+                            @include border-style();
+                            font-family: inherit;
+                            padding: 0.3em;
+                            font-size: 1.2em;
+                            margin: 0.5em;
+                        }
+
+                        input:focus { outline: none; }
+
+                        input:focus::-webkit-input-placeholder { color:transparent; }
+                        input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+                        input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+                        input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+                        button {
+
+                            @include border-style();
+                            color: $color2;
+                            font-size: 1.2em;
+                            padding: 0.3em;
+                            background-color: $color1;
+                            font-family: inherit;
+                            font-weight: 600;
+                            margin: 0.3em;
+                        } // End of btn
+                } // End of .searchDiv
+
+                .resultsContainer {
+                   display: none;
+                }
+        } // End of SECTION
+} // End of BODY

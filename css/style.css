@@ -43,75 +43,116 @@ button#openerBtn {
   border: none;
   padding: none;
   outline: none;
+  background-color: inherit;
+  color: blue;
 }
 
-.searchDiv {
-  display: none;
-}
-
-input {
-  text-align: center;
-  border-radius: 12px;
-  font-size: 1.2em;
-  padding: 0.3em;
-}
-
-input:focus {
-  outline: none;
-}
-
-input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-input:focus:-moz-placeholder {
-  color: transparent;
-}
-
-/* FF 4-18 */
-input:focus::-moz-placeholder {
-  color: transparent;
-}
-
-/* FF 19+ */
-input:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-/* IE 10+ */
 body {
-  background: gainsboro;
+  background: white;
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-size: 1.3em;
+  color: blue;
 }
 
 body section {
   height: 90vh;
+  margin: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+
+body section .searchDiv {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* FF 4-18 */
+  /* FF 19+ */
+  /* IE 10+ */
+}
+
+body section .searchDiv input {
   text-align: center;
-  margin: auto;
+  border-radius: 0;
+  border: 5px solid blue;
+  box-shadow: 5px 8px 8px black;
+  font-family: inherit;
+  padding: 0.3em;
+  font-size: 1.2em;
+  margin: 0.5em;
 }
 
-.resultsContainer {
-  height: 65vh;
-  margin: 0 8em;
+body section .searchDiv input:focus {
+  outline: none;
+}
+
+body section .searchDiv input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body section .searchDiv input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+body section .searchDiv input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+body section .searchDiv input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+body section .searchDiv button {
+  border-radius: 0;
+  border: 5px solid blue;
+  box-shadow: 5px 8px 8px black;
+  color: blue;
+  font-size: 1.2em;
+  padding: 0.3em;
+  background-color: white;
+  font-family: inherit;
+  font-weight: 600;
+  margin: 0.3em;
+}
+
+body section .resultsContainer {
+  display: none;
+}
+
+.resultsDiv {
+  min-height: 100%;
+  margin: 1.5em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto 1fr 1fr 1fr auto auto;
   grid-row-gap: 1em;
-  padding: 1em;
+  padding: 0.5em;
+  text-align: left;
 }
 
-.resultsContainer a {
+.resultsDiv a {
   text-decoration: none;
   color: inherit;
 }
 
+.resultsDiv h4 {
+  padding: 0.5em;
+  background-color: blue;
+  color: white;
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+.resultsDiv p {
+  padding: 0.5em;
+}
+
 .resultsCard {
-  border: 2px solid black;
-  padding: 1em;
+  border: 3px solid blue;
+  padding: 0.2em;
+  margin: 1em;
 }
  
 
-
-  /*# sourceMappingURL=style.css.map */
+ /*# sourceMappingURL= style.css.map */

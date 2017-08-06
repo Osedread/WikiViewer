@@ -1,21 +1,36 @@
 
-.resultsContainer {
-    height: 65vh;
+.resultsDiv {
+    min-height: 100%;
     // border: 5px solid red;
-    margin: 0 8em;
+    margin: 1.5em;
     // First implementation of CSS Grid system
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 1fr 1fr 1fr auto auto;
     grid-row-gap: 1em;
-    padding: 1em;
+    padding: 0.5em;
+    text-align: left;
 
     a {
         text-decoration: none;
         color: inherit;
     }
+
+    h4 {
+        padding: 0.5em;
+        background-color: $color2;
+        color: $color1;
+        margin-top: 0;
+        font-size: 1.1em;
+    }
+
+    p {
+        padding: 0.5em;
+    }
 }
 
 .resultsCard {
-    border: 2px solid black;
-    padding: 1em;
+    border: 3px solid $color2;
+    padding: 0.2em;
+    margin: 1em;
 }

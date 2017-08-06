@@ -3,7 +3,8 @@ const searchBtn = document.getElementById("searchBtn");
 const randomBtn = document.getElementById("randomBtn");
 
 function searchClick(event) {
-    const searchResults = document.querySelector(".resultsContainer");
+    resultsDiv.style.display = "flex";
+    const searchResults = document.querySelector(".resultsDiv");
     searchResults.innerHTML = "";
     // Cache the input
     const text = document.getElementById("searchBox").value;
@@ -32,11 +33,11 @@ function searchClick(event) {
                 const card = document.querySelector(".resultsCard");
                 const url = title.replace(/\s/g,"_");
                 console.log(url);
-                searchResults.innerHTML += "<a href='https://en.wikipedia.org/wiki/" + url + "' ><div class='resultsCard'><div class='resultsTitle'><h5>" + title + "</h5></div>" + "<div class='snippet'><p>" + snippet + "</p></div></div></a>";
+                searchResults.innerHTML += "<a href='https://en.wikipedia.org/wiki/" + url + "' ><div class='resultsCard'><div class='resultsTitle'><h4>" + title + "</h4></div>" + "<div class='snippet'><p>" + snippet + "...</p></div></div></a>";
                 
             }
         }
-    }
+    };
 }
     
 window.addEventListener("keypress", function(event) {
